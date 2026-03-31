@@ -18,6 +18,7 @@ body {
 /* ===== 전체 레이아웃 ===== */
 .portfolio {
   width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
   background: #fff;
 }
@@ -433,4 +434,111 @@ label {
 
 .instagram-section:hover .icon-hover {
   display: block;
+}
+
+/* ===== 반응형 (1440px 이하) ===== */
+@media (max-width: 1439px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .portfolio {
+    width: 100%;
+  }
+
+  /* 상단: 세로 정렬 */
+  .top-row {
+    flex-direction: column;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+
+  .header-row {
+    border-right: none;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name-section p {
+    font-size: 80px;
+    letter-spacing: -2px;
+  }
+
+  .description-section {
+    border-right: none;
+    padding: 30px 20px;
+  }
+
+  .description-section p {
+    font-size: 28px;
+    letter-spacing: -0.7px;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: 30px 20px;
+    border-top: 1px solid #000;
+  }
+
+  form {
+    width: 100%;
+    max-width: 536px;
+  }
+
+  /* 하단: 세로 정렬 */
+  .bottom-row {
+    flex-direction: column;
+  }
+
+  .contact-section {
+    width: 100%;
+  }
+
+  .email-box p {
+    font-size: 48px;
+    width: 100%;
+    letter-spacing: -1px;
+    padding: 20px;
+  }
+
+  .phone-box p {
+    font-size: 48px;
+    width: 100%;
+    height: auto;
+    letter-spacing: -1px;
+    padding: 20px;
+  }
+
+  .email-box,
+  .phone-box {
+    border-right: none;
+  }
+
+  .github-section {
+    width: 100%;
+    height: 300px;
+    border-right: none;
+  }
+
+  .github-section .icon-default,
+  .github-section .icon-hover {
+    width: 250px;
+    height: 244px;
+  }
+
+  .instagram-section {
+    width: 100%;
+    height: 300px;
+  }
+
+  .instagram-section .icon-default,
+  .instagram-section .icon-hover {
+    width: 200px;
+    height: 200px;
+  }
 }
